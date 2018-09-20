@@ -1,0 +1,40 @@
+.main-header {
+  width: 80%; }
+
+#main-nav {
+  width: 80%;
+  float: left;
+  box-shadow: none;
+  position: relative;
+  left: 140px;
+  top: 40px; }
+  #main-nav > ul > li {
+    width: 80% !important;
+    max-width: 300px;
+    overflow-y: hidden;
+    height: 40px;
+    box-shadow: 2px 4px 1px #985e08;
+    overflow-x: hidden; }
+    #main-nav > ul > li > ul {
+      height: 0px;
+      transition: all 1s ease-out; }
+      #main-nav > ul > li > ul li {
+        height: 0px;
+        transition: all 1s ease-out;
+        opacity: 0; }
+    #main-nav > ul > li.extensible:hover {
+      transition: height 1s ease-out;
+      overflow: visible; }
+      #main-nav > ul > li.extensible:hover > ul {
+        height: auto; }
+        #main-nav > ul > li.extensible:hover > ul li {
+          transition: opacity 1s ease-in;
+          animation: none;
+          height: 30px;
+          line-height: 30px;
+          transform: translate(100px, -10px); }
+
+.main-section {
+  position: relative;
+  top: 70px; }
+

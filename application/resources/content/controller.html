@@ -1,0 +1,68 @@
+Methods of the instation of Controller (actions) loads the view with
+the typical parameters. Url index/subpage executes the action subpage of the controller index.
+Additionally index/subpage/user/Jan/age/22 maps to the associtive array this._GET[user=>Jan,age=>22],
+reachable from the controller.<br />
+The controller index with one void action index looks like
+<pre>let ROOT_PATH=require(process.env.INIT_CONFIG).config.ROOT_PATH;
+let Controller = require(`${ROOT_PATH}/system/Controller`);
+let libs=require(`${ROOT_PATH/system/helpers/libs`);
+let socketsingleton=new require(`${ROOT_PATH}/system/socketsingleton`).Socketsingleton();
+/**
+* @class index
+* @constructor
+* @inherits Controller.Controller
+*/
+
+    class index extends Controller {
+        constructor(req, res, contr, act, GET, initData, mimetype) {
+    
+        super(req, res, contr, act, GET, initData, mimetype);
+    }    
+        index(){
+            let view = new this._View.View('/mview.nhtml');
+            view.getCnf().properties.content ='&lt;h1&gt;Hello there!&lt;/h1&gt;';
+    
+            view.parse();
+            this.res.end(view.render());
+    }
+
+
+exports.index= index;
+</pre>
+Replace the only action
+
+<pre>let ROOT_PATH=require(process.env.INIT_CONFIG).config.ROOT_PATH;
+let Controller = require(`${ROOT_PATH}/system/Controller1).Controller;
+let libs=require(`${ROOT_PATH}/system/helpers/libs/`);
+let socketsingleton=new require(`${ROOT_PATH}/system/socketsingleton`).Socketsingleton();
+/**
+* @class index
+* @constructor
+* @inherits Controller.Controller
+*/
+
+class index extends Controller {
+
+  constructor(req, res, contr, act, GET, initData, mimetype) {
+    
+    super(req, res, contr, act, GET, initData, mimetype);
+
+    this.view = new this._View.View('/mview.nhtml', '/main.conf');
+    this.view.getCnf().properties.list = this.view.getCnf().properties.subpagemenu;
+
+    this[this.act]();
+
+  }    
+    
+index(){
+    let view = new this._View.View('/mview.nhtml');
+    view.getCnf().properties.content ='&lt;h1&gt;Hello there!&lt;/h1&gt;';
+    view.parse();
+
+    this.res.end(view.render());
+
+        }
+}
+
+exports.index= index;
+</pre>

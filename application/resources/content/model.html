@@ -1,0 +1,26 @@
+Model is in a very basic form. It supports Mysql and Postgresql databases so far.
+However it implements loading the data in the background, when the page is rendering. For this aim it uses webworkers and socket. 
+If you want to use mysql connection, you must provide some configuration. Namelly, edit application/config/init.config.js file, and replace the content
+
+
+<pre>
+    
+let privateData = require(config.ROOT_PATH + 'privateData').privateData;
+let DBConfig = {
+    //   adapter:'Mysql',
+    host: config.APP_HOST,
+    username: privateData.username, /* Put here */
+    password: privateData.password, /* proper  */
+    database: privateData.database    /*  data    */
+}
+</pre>
+by your details, for example
+<pre>let DBConfig = {
+    //   adapter:'Mysql',
+    host: config.APP_HOST,
+    username: "login",
+    password: "secretpassword",
+    database: "shops"
+}
+</pre>
+If you want to test this page, you need to change two sql queries contained in file application/controllers/subpage.js.

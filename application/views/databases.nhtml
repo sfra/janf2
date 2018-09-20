@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>janf 2</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  [[css
+  <link rel="stylesheet" href="{href}" {rest} />
+  css]]
+
+
+
+
+  @{js}@
+
+
+
+</head>
+
+<body>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+  <header class="main-header clearfix">
+    <div>Welcome to janf2</div>
+    <nav id="main-nav">
+      <ul class="clearfix">
+        <li><a  href="/additional">Back</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main-section">
+    <header>
+      database @{database}@
+    </header>
+    <article>
+     @{content}@
+     @{result}@
+    </article>
+  </section>
+
+
+  <footer id="footer">
+    webpage:
+    <a target="_blank" href="https://github.com/sfra">Szymon Frankowski</a>
+  </footer>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!--
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');fpos
+    </script>
+-->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+
+  <!-- endbuild -->
+</body>
+
+</html>

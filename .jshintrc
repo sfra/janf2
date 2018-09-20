@@ -1,0 +1,7 @@
+{
+  "browser": true,
+  "esversion": 6,
+  "requirejs": true,
+  "predef": ["requirejs", "console", "sessionStorage", "define", "describe", "it", "exports", "require", "process"]
+
+}

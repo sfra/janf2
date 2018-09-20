@@ -1,0 +1,8 @@
+[
+
+    {"rule": "/[controller]/[action]/{var_x}/{value_x}/{var_y}/{value_y}", "priority":0, "name":"get"}
+    ,
+    {"rule": "/[controller]/[action]", "priority":2, "name":"controllerAction"
+    }
+
+]

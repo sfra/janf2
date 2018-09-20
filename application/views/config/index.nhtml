@@ -1,0 +1,31 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf8" />
+  <title>@{title} @{frameworkname}@</title>
+  [[css
+  <link rel="stylesheet" href="{href}" {additional} />
+  ]]
+  [[scripts
+  <script type="application/javascript" src="{src}"></script>
+  ]]
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>@{nav}@</nav>
+    <section>
+        <article>
+            
+        </article>
+    </section>
+    <aside>
+        
+    </aside>
+</body>
+
+<body>
+</body>
