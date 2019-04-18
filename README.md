@@ -1,10 +1,38 @@
 # README
 janf2 is a modernized version of MVC framework written in node.js.
 
+
+At the first install the depencies:
+
+```
+npm install
+```
+
 To run the server just put
 ```
-node index.js
+node index.js -config=<path to config file>
 ```
+where config file is just a json file containing the basic settings:
+
+```
+{ 
+    "DBConfig": 
+    {
+        "host": "localhost",
+        "username": "szymon",
+        "password": "your secred password to the database",
+        "database": "janf2"
+    },
+    "ssl" : {
+        "key":  "/home/szymon/etc/ssl/private/node-selfsigned.key",     
+        "cert": "/home/szymon/etc/ssl/certs/node-selfsigned.crt"
+
+
+    }
+}
+
+```
+
 
 Alternativelly you can install [nodemon](https://github.com/remy/nodemon/):
 
@@ -19,7 +47,7 @@ node run.js dev
 ```
 to obtain server and browser reload after the project is changed.
 
-##Model
+## Model
 Model is in a very basic form. It supports MySql and Postgresql databases so far.
 However it implements loading the data in the background, when the page is rendering. For this aim it uses webworkers and socket. 
 If you want to use Mysql connection, you must provide some configuration. Namelly, edit application/config/init.config.js file, and replace the content
