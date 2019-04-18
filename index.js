@@ -210,7 +210,7 @@ let serverCallback = (req, res) => {
     }
     if (url === '/' || url === '/index.html') {
       let dc = `${__dirname}/application/controllers/${INIT_CONFIG.config.DEFAULT_CONTROLLER}`;
-      currentControllerFile = require("/home/szymon/sorsy/git/janf2/application/controllers/index");
+      currentControllerFile = require(`${__dirname}/application/controllers/index`);
 
       currentController = new currentControllerFile[INIT_CONFIG.config.DEFAULT_CONTROLLER](req, res, appConfig.config.DEFAULT_ACTION, appConfig, GET);
     } else if (fileexten[0] && url.search('__system__') < 0) {
