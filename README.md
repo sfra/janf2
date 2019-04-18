@@ -45,7 +45,7 @@ and then
 ```
 node run.js dev
 ```
-to obtain server and browser reload after the project is changed.
+to obtain server and browser reload after the project is changed. However, remember to put config.json file into the parent folder or change the path on run.js file.
 
 ## Model
 Model is in a very basic form. It supports MySql and Postgresql databases so far.
