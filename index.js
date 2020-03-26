@@ -77,6 +77,23 @@ if (typeof argum.host !== 'undefined') {
 if (argum.protocol === 'https') {
   server = https.createServer(optionsSSL, (req, res) => {
     serverCallback(req, res);
+    fs.readFile(appConfig.ssl.key, 'utf8', (err, data) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+    
+      optionsSSL.key = data;
+    });
+    
+    fs.readFile(appConfig.ssl.cert, 'utf8', (err, data) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      optionsSSL.cert = data;
+    
+    });
   });
 } else {
   server = http.createServer((req, res) => {
@@ -90,23 +107,7 @@ if (typeof argum.config !== 'undefined') {
   copyProperties(configJSON, appConfig);
 }
 
-fs.readFile(appConfig.ssl.key, 'utf8', (err, data) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
 
-  optionsSSL.key = data;
-});
-
-fs.readFile(appConfig.ssl.cert, 'utf8', (err, data) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  optionsSSL.cert = data;
-
-});
 
 
 
