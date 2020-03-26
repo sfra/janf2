@@ -23,7 +23,7 @@
   "author": "Szymon Frankowski",
   "license": "GNU Lesser PGL",
   "devDependencies": {
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "mocha": "^5.2.0",
     "moment": "^2.7.0",
     "mysql": "^2.4.0",
