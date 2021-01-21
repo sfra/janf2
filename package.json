@@ -39,6 +39,6 @@
     "multiparty": "^4.2.1",
     "named-regexp-groups": "^1.0.3",
     "pg": "^7.4.3",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.4.0"
   }
 }
